@@ -1,0 +1,81 @@
+<%- include ('../partials/header') %>
+<main>
+  <section class="flex flex-col md:flex-row justify-center items-center">
+    <div class="md:basis-1/2 self-stretch order-2 md:order-1 md:mb-5">
+      <form
+        class="form w-full md:w-full px-4 md:px-12 py-8"
+        action="/u/signup"
+        method="POST"
+      >
+        <div class="flex items-center my-6 justify-start">
+          <h3 class="inline-block font-semibold text-2xl text-gray-700 my-1">
+            Sign In
+          </h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-gray-500"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+            />
+          </svg>
+        </div>
+
+        <%- include ('../partials/alert') %>
+
+        <div class="grid grid-cols-12 gap-3 md:gap-2">
+          <div class="col-span-12">
+            <label for="email-address" class="text-sm text-gray-700"
+              >Email address</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email-address"
+              required
+              class="bg-transparent font-normal focus:border-b-blue-500 focus:ring-0 text-sm mt-1 block w-full h-12 md:h-10 border-x-0 border-t-0 border-b border-gray-700 transition duration-300 px-0"
+            />
+          </div>
+          <div class="col-span-12">
+            <label for="password" class="text-sm text-gray-700">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              class="bg-transparent font-normal focus:border-b-blue-500 focus:ring-0 text-sm mt-1 block w-full h-12 md:h-10 border-x-0 border-t-0 border-b border-gray-700 transition duration-300 px-0"
+            />
+          </div>
+          <div class="col-span-12 my-4">
+            <button
+              id="submit-btn"
+              type="submit"
+              class="w-full text-sm flex items-center justify-center space-x-1 my-2 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 px-0 px-8 py-3 hover:-translate-y-0.5 rounded-full cursor-pointer"
+            >
+              Sign In
+            </button>
+          </div>
+          <div class="col-span-12">
+            <p class="text-sm md:text-xs text-gray-400">
+              Don't Have An Account ?
+              <a class="text-gray-600" href="/auth/vendor">Sign Up</a>
+            </p>
+          </div>
+          <div class="col-span-12">
+            <p class="text-sm md:text-xs text-gray-400">
+              <a class="text-gray-600" href="/u/forgot">Forgot Password ?</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<%- include ('../partials/footer') %>
