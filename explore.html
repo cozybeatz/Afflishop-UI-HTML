@@ -33,7 +33,7 @@
       </div>
 
       <!-- SECOND PART OF NAV -->
-      <div class="flex justify-around items-center space-x-4 md:space-x-6 p-4">
+      <div class="flex justify-around items-center space-x-3 md:space-x-6 p-4">
         <!-- SEARCH BUTTON -->
         <div id="search-icon" class="cursor-pointer">
           <svg
@@ -42,7 +42,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-6 h-6 hover:text-blue-400"
             onclick="toggleSearchBar()"
           >
             <path
@@ -54,22 +54,22 @@
         </div>
 
         <!-- FAVORITE BUTTON -->
-        <div class="cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-            />
-          </svg>
-        </div>
+        <!-- <div class="cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+          />
+        </svg>
+      </div> -->
 
         <!-- CART BUTTON -->
         <div>
@@ -92,21 +92,114 @@
             </svg>
           </div>
         </div>
+
+        <div class="">
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            class="text-slate-200 bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2.5 text-center inline-flex items-center"
+            type="button"
+          >
+            UPGRADE
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm shadow w-44 dark:bg-gray-700"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="/auth/vendor"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Vendor
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="/auth/affiliate"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Affiliate
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- MAIN CONTENT -->
     <main class="relative mx-auto">
+      <form
+        id="search-form"
+        class="absolute hidden left-0 top-0 h-full w-full backdrop-blur-sm bg-slate-400/50 z-10"
+      >
+        <div class="flex items-center justify-center">
+          <input
+            id="search-input"
+            type="search"
+            class="block mt-40 px-2.5 py-3 w-5/6 md:w-4/6 z-20 text-sm text-gray-300 bg-gray-700 shadow-lg rounded-lg focus:ring-slate-200 focus:border-slate-200 placeholder:text-gray-400"
+            placeholder="Search Afflishop..."
+            required
+          />
+        </div>
+      </form>
+
       <!-- HEADER -->
       <section
         class="relative flex flex-col md:flex-row items-center justify-center bg-cyan-500 pt-10 md:p-5"
       >
         <div class="flex flex-col md:items-start items-center space-y-4">
           <!-- DROPDOWN -->
-          <div>
+          <div class="">
             <button
               id="dropdownDefaultButton"
-              data-dropdown-toggle="dropdown"
+              data-dropdown-toggle="dropdown-1"
               class="text-black bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2.5 text-center inline-flex items-center"
               type="button"
             >
@@ -129,8 +222,8 @@
             </button>
             <!-- Dropdown Menu -->
             <div
-              id="dropdown"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+              id="dropdown-1"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm shadow w-44 dark:bg-gray-700"
             >
               <ul
                 class="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -276,10 +369,7 @@
             <div class="text-xs md:text-xs text-slate-700">
               <p class="inline tracking-normal leading-5">
                 In the Changing World Order, Ray Dalio examines the big history
-                of the last 500 years, the rise and fall of major empires, the
-                big economic cycles, and concludes that the times ahead will be
-                very different from anything that we have experienced in our
-                lifetimes....
+                of the last 500 years....
               </p>
               <a class="text-blue-500" href="#">see more</a>
             </div>
@@ -379,11 +469,7 @@
             <div class="text-xs md:text-xs text-slate-700">
               <p class="inline tracking-normal leading-5">
                 The key is to be present – suspend your own thoughts and give
-                full attention to what the other person has to say. Discuss what
-                matters to them: Don't just “push” your message – focus on what
-                really matters to the other person: Leave others a little
-                better:The best way to build relationships is to add value to
-                others.....
+                full attention to what the other person has to say......
               </p>
               <a class="text-blue-500" href="#">see more</a>
             </div>
@@ -482,9 +568,7 @@
             <div class="text-xs md:text-xs text-slate-700">
               <p class="inline tracking-normal leading-5">
                 The Millionaire Fastlane points out what's wrong with the old
-                get a degree, get a job, work hard, retire rich model, defines
-                wealth in a new way, and shows you the path to retiring
-                young.....
+                get a degree, get a job, work hard, retire rich mode.....
               </p>
               <a class="text-blue-500" href="#">see more</a>
             </div>
@@ -523,7 +607,19 @@
 
       <!-- TOP SELLERS -->
       <section class="m-6 md:m-8">
-        <h1 class="font-bold text-2xl text-black">Top Selling</h1>
+        <div class="flex justify-between items-start">
+          <h1 class="font-bold text-2xl text-black">Top Sellers</h1>
+
+          <select
+            id="volume"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+          >
+            <option value="24hr">24hr</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
+          </select>
+        </div>
         <p
           class="relative text-xs text-gray-400 font-bold uppercase border-b-2 border-black w-max pb-2"
         >
@@ -691,6 +787,343 @@
           </section>
         </section>
       </section>
+
+      <!-- CATEGORIES -->
+      <section class="m-6 md:m-8">
+        <h1 class="font-bold text-2xl text-black">Categories</h1>
+        <p
+          class="relative text-xs text-gray-400 font-bold uppercase border-b-2 border-black w-max pb-2"
+        >
+          Browse by Category
+        </p>
+        <div class="border-b border-gray-200 w-full h-1 -mt-1"></div>
+
+        <section class="grid grid-cols-12 justify-between gap-5 my-5">
+          <a
+            href="#"
+            class="col-span-6 md:col-span-3 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-500 font-medium text-2xl md:text-4xl">
+              Arts
+            </h3>
+            <p class="text-slate-500 font-light text-sm md:text-xs my-2 mx-10">
+              & Music
+            </p>
+          </a>
+          <a
+            href="#"
+            class="col-span-6 md:col-span-6 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-500 font-medium text-2xl md:text-4xl">
+              Biographies
+            </h3>
+          </a>
+          <a
+            class="col-span-12 md:col-span-3 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-500 font-medium text-2xl md:text-4xl">
+              History
+            </h3>
+          </a>
+          <a
+            class="col-span-6 md:col-span-4 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-900 font-medium text-2xl md:text-4xl">
+              Literature
+            </h3>
+            <p class="text-slate-900 font-light text-sm md:text-xs my-2 mx-10">
+              & Fiction
+            </p>
+          </a>
+          <a
+            href="#"
+            class="col-span-6 md:col-span-3 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-900 font-medium text-2xl md:text-4xl">
+              Crypto
+            </h3>
+            <p class="text-slate-900 font-light text-sm md:text-xs my-2 mx-10">
+              Web3 & NFTs
+            </p>
+          </a>
+          <a
+            href="#"
+            class="col-span-6 md:col-span-5 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-500 font-medium text-2xl md:text-4xl">
+              Project
+            </h3>
+            <p class="text-slate-500 font-light text-sm md:text-xs my-2 mx-10">
+              & Product Management
+            </p>
+          </a>
+          <a
+            href="#"
+            class="col-span-6 md:col-span-5 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-500 font-medium text-2xl md:text-4xl">
+              Forex
+            </h3>
+          </a>
+          <a
+            class="col-span-12 md:col-span-7 text-center flex flex-col justify-center items-center bg-slate-200 py-10 rounded-2xl border border-dotted cursor-pointer border-gray-400"
+          >
+            <h3 class="text-slate-500 font-medium text-2xl md:text-4xl">
+              Social Media
+            </h3>
+            <p class="text-slate-500 font-light text-sm md:text-xs my-2 mx-10">
+              Growth & Management
+            </p>
+          </a>
+        </section>
+      </section>
+
+      <!-- TOP AFFILIATES -->
+      <section class="m-6 md:m-8">
+        <div class="flex justify-between items-start">
+          <h1 class="font-bold text-2xl text-black">Top Affiliates</h1>
+
+          <select
+            id="volume"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-cyan-500 dark:focus:border-cyan-500"
+          >
+            <option value="24hr">24hr</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
+          </select>
+        </div>
+        <p
+          class="relative text-xs text-gray-400 font-bold uppercase border-b-2 border-black w-max pb-2"
+        >
+          Vendors
+        </p>
+        <div class="border-b border-gray-200 w-full h-1 -mt-1"></div>
+
+        <!-- COLLECTIONS SECTION -->
+        <section class="my-4 space-y-4">
+          <!-- COLLECTIONS HEADER -->
+          <div
+            class="flex items-center justify-between uppercase font-bold text-xs text-gray-400"
+          >
+            <p>Vendor</p>
+            <p>Volume</p>
+          </div>
+
+          <!-- COLLECTIONS -->
+          <section>
+            <div
+              class="flex justify-between hover:bg-gray-50 cursor-pointer py-4"
+            >
+              <!-- BOOK DETAILS -->
+              <div class="flex items-center space-x-3 md:space-x-4">
+                <p class="font-black font-grotesque text-lg text-gray-500">1</p>
+                <div class="flex items-center space-x-2">
+                  <div class="">
+                    <img
+                      class="object-cover w-12 h-12 rounded-full shadow-md"
+                      src="/images/authors/ray.webp"
+                      alt="Book 3"
+                    />
+                  </div>
+
+                  <div>
+                    <h1
+                      class="flex items-center font-bold text-sm text-gray-800"
+                    >
+                      Ray Dalio
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <!-- VOLUME -->
+              <div class="flex items-center space-x-2">
+                <p class="flex items-center font-medium text-xs text-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3 mr-1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.47 2.47a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06l-6.22-6.22V21a.75.75 0 01-1.5 0V4.81l-6.22 6.22a.75.75 0 11-1.06-1.06l7.5-7.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  +18%
+                </p>
+                <p class="font-bold font-grotesque text-lg text-black">
+                  $3,950
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between hover:bg-gray-50 cursor-pointer py-4"
+            >
+              <!-- BOOK DETAILS -->
+              <div class="flex items-center space-x-3 md:space-x-4">
+                <p class="font-black font-grotesque text-lg text-gray-500">3</p>
+                <div class="flex items-center space-x-2">
+                  <div class="">
+                    <img
+                      class="object-cover w-12 h-12 rounded-full shadow-md"
+                      src="/images/authors/mj.jpg"
+                      alt="Book 2"
+                    />
+                  </div>
+
+                  <div>
+                    <h1
+                      class="flex items-center font-bold text-sm text-gray-800"
+                    >
+                      MJ Demarco
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <!-- VOLUME -->
+              <div class="flex items-center space-x-2">
+                <p class="flex items-center font-medium text-xs text-red-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3 mr-1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25a.75.75 0 01.75.75v16.19l6.22-6.22a.75.75 0 111.06 1.06l-7.5 7.5a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 111.06-1.06l6.22 6.22V3a.75.75 0 01.75-.75z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                  -30.78%
+                </p>
+                <p class="font-bold font-grotesque text-lg text-black">
+                  $1,050
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between hover:bg-gray-50 cursor-pointer py-4"
+            >
+              <!-- BOOK DETAILS -->
+              <div class="flex items-center space-x-3 md:space-x-4">
+                <p class="font-black font-grotesque text-lg text-gray-500">2</p>
+                <div class="flex items-center space-x-2">
+                  <div class="">
+                    <img
+                      class="object-cover w-12 h-12 rounded-full shadow-md"
+                      src="/images/authors/dale.jpg"
+                      alt="Book 2"
+                    />
+                  </div>
+
+                  <div>
+                    <h1
+                      class="flex items-center font-bold text-sm text-gray-800"
+                    >
+                      Dale Carnegie
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <!-- VOLUME -->
+              <div class="flex items-center space-x-2">
+                <p class="flex items-center font-medium text-xs text-green-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-3 h-3 mr-1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.47 2.47a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06l-6.22-6.22V21a.75.75 0 01-1.5 0V4.81l-6.22 6.22a.75.75 0 11-1.06-1.06l7.5-7.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  +29%
+                </p>
+                <p class="font-bold font-grotesque text-lg text-black">
+                  $30,600
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <!-- DESCRIPTION AND UPGRADE -->
+      <section class="p-6 md:p-8 bg-gradient-to-r from-cyan-700 to-emerald-500">
+        <div
+          class="text-gray-200 flex flex-row space-x-4 justify-center items-center mb-4"
+        >
+          <div class="bg-white rounded-full">
+            <img class="w-28 md:w-36" src="/images/logo.png" alt="" />
+          </div>
+
+          <span class="text-left font-medium text-3xl md:text-6xl w-full"
+            >Afflishop</span
+          >
+        </div>
+        <p class="text-slate-200 w-full md:w-1/2">
+          Become an afliate earn amazing commisions. Or become a vendor and get
+          your products sales pushed by professional affiliates
+        </p>
+
+        <a
+          class="flex items-center justify-between space-x-1 my-5 bg-white text-black transition-all font-semibold duration-300 px-8 py-3 hover:-translate-y-0.5 w-max rounded-full cursor-pointer"
+          href="/auth/vendor"
+        >
+          <span>Start Selling</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+            />
+          </svg>
+        </a>
+      </section>
     </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-10 px-5 md:px-10 grid md:grid-cols-12 items-center gap-6 md:gap-9 bg-slate-900"
+    >
+      <div class="col-span-12 flex flex-row justify-start space-x-8">
+        <div class="flex flex-col items-start space-y-2">
+          <h1
+            class="text-xl md:text-2xl text-slate-200 font-semibold tracking-normal"
+          >
+            Contact Us
+          </h1>
+
+          <a
+            class="text-sm tracking-normal leading-6 md:text-xs font-normal text-gray-400 hover:text-yellow-500 transition duration-200"
+            href="mailto:support@market-snipers.com"
+          >
+            support@afflishop.com
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/search.js"></script>
+    <!-- <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
   </body>
 </html>
