@@ -6,6 +6,7 @@ const closeButton = document.getElementById("close-button");
 function toggleNav() {
   //   nav.classList.toggle("animate-slide");
   nav.classList.toggle("hidden");
+  nav.classList.toggle("flex");
   isNavOpen = !isNavOpen;
 
   openButton.classList.toggle("hidden");
