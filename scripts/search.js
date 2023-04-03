@@ -1,3 +1,7 @@
+let searchForm = document.querySelector("#search-form");
+let searchInput = document.querySelector("#search-input");
+
 function toggleSearchBar() {
-  console.log("search");
+  searchForm.classList.toggle("hidden");
+  searchForm.classList.toggle("animate-ping-in");
 }
