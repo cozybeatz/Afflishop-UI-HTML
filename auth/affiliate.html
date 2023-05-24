@@ -99,6 +99,7 @@
       </div>
     </section>
     <!-- MAIN CONTENT -->
+
     <main>
       <section class="flex flex-col md:flex-row justify-center items-center">
         <div class="md:basis-1/2 self-stretch order-2 md:order-1 md:mb-5">
@@ -128,8 +129,6 @@
                 />
               </svg>
             </div>
-
-            <%- include ('../partials/alert') %>
 
             <div class="grid grid-cols-12 gap-3 md:gap-2">
               <div class="col-span-12">
@@ -165,6 +164,42 @@
                   type="number"
                   name="walletAddress"
                   id="walletAddress"
+                  required
+                  class="bg-transparent font-normal focus:border-b-blue-500 focus:ring-0 text-sm mt-1 block w-full h-12 md:h-10 border-x-0 border-t-0 border-b border-gray-700 transition duration-300 px-0"
+                />
+              </div>
+              <div class="col-span-12">
+                <label for="bankName" class="text-sm text-gray-700"
+                  >Bank Name</label
+                >
+                <input
+                  type="text"
+                  name="bankName"
+                  id="bankName"
+                  required
+                  class="bg-transparent font-normal focus:border-b-blue-500 focus:ring-0 text-sm mt-1 block w-full h-12 md:h-10 border-x-0 border-t-0 border-b border-gray-700 transition duration-300 px-0"
+                />
+              </div>
+              <div class="col-span-12">
+                <label for="accountNumber" class="text-sm text-gray-700"
+                  >Bank Account Number</label
+                >
+                <input
+                  type="number"
+                  name="accountNumber"
+                  id="accountNumber"
+                  required
+                  class="bg-transparent font-normal focus:border-b-blue-500 focus:ring-0 text-sm mt-1 block w-full h-12 md:h-10 border-x-0 border-t-0 border-b border-gray-700 transition duration-300 px-0"
+                />
+              </div>
+              <div class="col-span-12">
+                <label for="accountName" class="text-sm text-gray-700"
+                  >Bank Account Name</label
+                >
+                <input
+                  type="number"
+                  name="accountName"
+                  id="accountName"
                   required
                   class="bg-transparent font-normal focus:border-b-blue-500 focus:ring-0 text-sm mt-1 block w-full h-12 md:h-10 border-x-0 border-t-0 border-b border-gray-700 transition duration-300 px-0"
                 />
