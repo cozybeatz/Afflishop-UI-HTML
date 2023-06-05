@@ -178,9 +178,7 @@
     <!-- MAIN CONTENT -->
     <main class="relative mx-auto">
       <section class="m-6 md:m-8">
-        <div
-          class="flex items-center space-x-2 border-b border-gray-200 pb-4 w-max"
-        >
+        <div class="flex items-center space-x-2 w-max">
           <h1 class="text-xl font-semibold">Shopping Cart</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -195,115 +193,132 @@
         </div>
 
         <!-- Cart -->
-        <section class="w-full md:w-3/5 lg:w-2/5 my-10">
-          <!-- Item 1 -->
-          <div
-            class="grid grid-cols-6 items-center bg-gray-100 border-y border-gray-200"
-          >
-            <div class="col-span-2">
-              <img
-                class="w-24 h-24 object-cover"
-                src="/images/books/1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
-              <div class="flex items-center justify-between space-x-4">
-                <p class="text-base font-semibold">Crypto for Babies</p>
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
+        <section class="w-full md:w-3/5 lg:w-2/5 my-5">
+          <!-- Items -->
+          <div>
+            <!-- Item 1 -->
+            <div
+              class="grid grid-cols-6 items-center bg-gray-100 border-y border-gray-200"
+            >
+              <div class="col-span-2">
+                <img
+                  class="w-24 h-24 object-cover"
+                  src="/images/books/1.jpg"
+                  alt=""
+                />
               </div>
-              <p class="text-gray-400 font-normal text-sm space-x-2">
-                <span class="font-grotesque font-semibold text-lg text-gray-600"
-                  >$10,00</span
-                >
-                <span>x 1</span>
-              </p>
+              <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
+                <div class="flex items-center justify-between space-x-4">
+                  <p class="text-base font-semibold">Crypto for Babies</p>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-gray-400 font-normal text-sm space-x-2">
+                  <span
+                    class="font-grotesque font-semibold text-lg text-gray-600"
+                    >$10,00</span
+                  >
+                  <span>x 1</span>
+                </p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="grid grid-cols-6 items-center gap-2 bg-gray-100 border-y border-gray-200"
+            >
+              <div class="col-span-2">
+                <img
+                  class="w-24 h-24 object-cover"
+                  src="/images/books/2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
+                <div class="flex items-center justify-between space-x-4">
+                  <p class="text-base font-semibold">Goats In Business</p>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <p class="text-gray-400 font-normal text-sm space-x-2">
+                  <span
+                    class="font-grotesque font-semibold text-lg text-gray-600"
+                    >$10,00</span
+                  >
+                  <span>x 1</span>
+                </p>
+              </div>
             </div>
           </div>
-          <!-- Item 2 -->
-          <div
-            class="grid grid-cols-6 items-center gap-2 bg-gray-100 border-y border-gray-200"
-          >
-            <div class="col-span-2">
-              <img
-                class="w-24 h-24 object-cover"
-                src="/images/books/2.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
-              <div class="flex items-center justify-between space-x-4">
-                <p class="text-base font-semibold">Goats In Business</p>
-                <div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <p class="text-gray-400 font-normal text-sm space-x-2">
-                <span class="font-grotesque font-semibold text-lg text-gray-600"
-                  >$10,00</span
-                >
-                <span>x 1</span>
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <!-- Coupon Form -->
-        <form
-        class="w-full md:w-3/5 lg:w-2/5"
-            action="/u/signup"
-            method="POST"
-          >
-        
-          <div class="grid grid-cols-12 gap-3 md:gap-2">
-            <div class="col-span-6">
-              <input
-                type="text"
-                name="coupon"
-                placeholder="Enter coupon"
-                required
-                class="bg-transparent font-normal focus:border-blue-500 focus:ring-0 text-sm block w-full h-10 border border-gray-200 transition duration-300 px-2 rounded-md"
-              />
-            </div>
-            <div class="col-span-6">
+          <!-- Coupon Form -->
+          <form class="w-full py-4" action="/u/signup" method="POST">
+            <div class="grid grid-cols-12 gap-3 md:gap-2">
+              <div class="col-span-9">
+                <input
+                  type="text"
+                  name="coupon"
+                  placeholder="Enter coupon"
+                  required
+                  class="bg-transparent font-normal focus:border-blue-500 focus:ring-0 text-sm block w-full h-10 border border-gray-200 transition duration-300 px-4 rounded-md"
+                />
+              </div>
+              <div class="col-span-3">
                 <button
                   id="submit-btn"
                   type="submit"
-                  class="w-full text-sm flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 h-10 px-8 rounded-md cursor-pointer"
+                  class="w-full text-sm flex items-center justify-center space-x-1 border border-gray-300 text-gray-800 transition-all font-semibold duration-300 h-10 px-8 rounded-md cursor-pointer"
                 >
-                 Apply coupon
+                  Apply
                 </button>
               </div>
-        </form>
+            </div>
+          </form>
 
-        <!-- ORDER SUMMARY -->
-        <div>
-            
-        </div>
+          <!-- ORDER SUMMARY -->
+          <div class="space-y-2 py-4 border-t border-gray-100">
+            <div
+              class="flex items-center justify-between text-sm text-gray-500"
+            >
+              <p>Subtotal</p>
+              <p>$125</p>
+            </div>
+            <div class="flex items-center justify-between text-black">
+              <p class="text-sm">Total</p>
+              <p class="font-grotesque font-bold text-lg">$105</p>
+            </div>
+            <button
+              id="checkout-btn"
+              type="submit"
+              class="w-full text-sm flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-semibold duration-300 h-10 px-8 rounded-md cursor-pointer"
+            >
+              Proceed To Checkout
+            </button>
+          </div>
+        </section>
       </section>
     </main>
 
