@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/output.css" />
-    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+    <link rel="stylesheet" href="../stylesheets/output.css" />
+    <link rel="stylesheet" href="..//stylesheets/dashboard.css" />
     <title>Afflishop | Dashboard</title>
   </head>
   <body class="min-h-screen">
@@ -67,7 +67,7 @@
               </h4>
               <a
                 class="border border-gray-400 rounded-md px-6 md:px-4 py-1 text-base md:text-xs text-slate-300 font-normal"
-                href="/account/profile/update"
+                href="/account/profile/update.html"
                 >Edit</a
               >
             </div>
@@ -171,7 +171,7 @@
               </svg>
             </a>
             <a
-              href="/account/profile/.html"
+              href="/account/profile.html"
               class="hover:text-white hover:bg-gray-600 transition-all flex items-center py-2 px-4 rounded-lg my-2 ml-2"
             >
               Profile
@@ -227,67 +227,143 @@
           </div>
         </nav>
       </div>
+
       <!-- MAIN CONTENT -->
       <div class="flex flex-col justify-center items-center my-10">
-        <section class="w-full mx-auto">
-          <form
-            class="form w-full mx-auto md:w-3/5 px-4 md:px-12 py-8"
-            action="/u/signup"
-            method="POST"
-          >
-            <div class="flex items-center space-x-2 my-4">
-              <p class="text-slate-100 text-3xl md:text-2xl font-semibold">
-                Update Password
+        <!-- REFERRAL BONUS -->
+        <section
+          class="flex-col basis-2/5 border border-dotted bg-slate-900 self-stretch md:self-start items-center rounded-xl m-4 py-10 px-6"
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex flex-col self-start">
+              <p class="text-gray-200 text-3xl md:text-2xl font-bold">$10</p>
+              <p class="text-gray-300 text-base md:text-sm font-semibold">
+                Referral Bonus
               </p>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6 text-slate-100"
+              <div
+                class="self-stretch bg-slate-500 rounded pl-3 my-2 flex justify-between items-center space-x-3"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
-                />
-              </svg>
-            </div>
-
-            <div class="grid grid-cols-12 gap-3 md:gap-2">
-              <div class="col-span-12">
-                <label for="password" class="text-base text-gray-300"
-                  >New Password</label
+                <p
+                  class="walletAddress break-all text-white text-base font-medium py-2"
                 >
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  required
-                  class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 text-base mt-1 block w-full h-12 md:h-10 rounded-md transition duration-300 px-2"
-                />
+                  https://afflishop.com/?r=cm9iZXJ0aWZlYW55aTFAZ21haWwuY29t
+                </p>
+                <span
+                  class="copy-btn w-1/4 inline-flex self-stretch justify-center items-center py-1 px-2 border border-transparent shadow-sm text-sm font-semibold text-gray-700 cursor-pointer bg-gray-50 rounded-tr rounded-br"
+                >
+                  Copy
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4 ml-2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+                    />
+                  </svg>
+                </span>
               </div>
-              <div class="col-span-12">
-                <label for="confirm" class="text-base text-gray-300"
-                  >Confirm Password</label
-                >
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="flex-col md:w-3/5 self-stretch md:self-start items-center px-6"
+        >
+          <p class="text-white text-lg">
+            For every user registered under your referral link, you get 50%
+            profit from their registeration fee! The table below only shows
+            referrals whose commission you are yet to withdraw.
+          </p>
+        </section>
+
+        <section
+          class="flex-col md:w-3/5 border border-dotted bg-slate-900 self-stretch md:self-start items-center m-4"
+        >
+          <div
+            class="flex bg-gray-600 text-gray-300 py-2 px-2 space-x-4 w-full"
+          >
+            <p class="basis-1/6">#</p>
+            <p class="basis-1/5">Referrals</p>
+            <p class="basis-2/5">Vendor Commission (50%)</p>
+            <p class="basis-2/5">Affiliate Commission (50%)</p>
+          </div>
+          <div class="flex text-gray-200 py-2 px-2 space-x-4 w-full">
+            <p class="basis-1/6">1</p>
+            <p class="basis-1/5">22</p>
+            <p class="basis-2/5">$50</p>
+            <p class="basis-2/5">$50</p>
+          </div>
+        </section>
+
+        <section
+          class="flex-col md:w-2/5 border border-dotted bg-slate-900 self-stretch md:self-start items-center m-4 px-6 py-10"
+        >
+          <form class="w-full" action="">
+            <div class="grid grid-cols-12 gap-6 w-full">
+              <!-- PAYMENT METHOD -->
+              <div class="col-span-12 md:col-span-12">
+                <p class="text-left text-gray-300 mb-2">Method</p>
+                <div class="flex flex-col space-y-4">
+                  <div class="flex items-center">
+                    <input
+                      type="radio"
+                      id="usdt"
+                      name="method"
+                      class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
+                    />
+                    <label for="usdt" class="ml-2 text-sm text-gray-300"
+                      >USDT (TRC20)</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      type="radio"
+                      id="tron"
+                      name="method"
+                      class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
+                    />
+                    <label for="tron" class="ml-2 text-sm text-gray-300"
+                      >Tron (TRX)</label
+                    >
+                  </div>
+                  <div class="flex items-center">
+                    <input
+                      type="radio"
+                      id="bank"
+                      name="method"
+                      class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300"
+                    />
+                    <label for="bank" class="ml-2 text-sm text-gray-300"
+                      >Bank</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-span-12 md:col-span-12">
                 <input
-                  type="password"
-                  name="confirm"
-                  id="confirm"
+                  type="text"
+                  name="walletAddress"
+                  id="walletAddress"
                   required
-                  class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 text-base mt-1 block w-full h-12 md:h-10 rounded-md transition duration-300 px-2"
+                  autocomplete="walletAddress"
+                  placeholder="Enter your wallet address"
+                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
                 />
               </div>
               <div class="col-span-12 my-4">
                 <button
                   id="submit-btn"
                   type="submit"
-                  class="w-full text-base flex items-center justify-center space-x-1 my-2 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 px-8 py-3 rounded-full cursor-pointer"
+                  class="w-full text-base flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 px-8 py-3 rounded-full cursor-pointer"
                 >
-                  Update Password
+                  Withdraw
                 </button>
               </div>
             </div>
@@ -297,5 +373,6 @@
     </div>
 
     <script src="../scripts/nav.js"></script>
+    <script src="../scripts/referral.js"></script>
   </body>
 </html>

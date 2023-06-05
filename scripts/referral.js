@@ -39,3 +39,42 @@ const copyWalletAddress = async (e) => {
 for (let i = 0; i < copyBtn.length; i++) {
   copyBtn[i].addEventListener("click", copyWalletAddress);
 }
+
+// REFERRAL WITHDRAWAL FORM
+
+// Retrieve the bank radio button, wallet address input, and paragraph elements
+const bankRadio = document.getElementById("bank");
+const usdtRadio = document.getElementById("usdt");
+const tronRadio = document.getElementById("tron");
+const walletAddressInput = document.getElementById("walletAddress");
+const bankMessage = document.createElement("p");
+bankMessage.textContent = "Make sure your bank account details are updated";
+
+// Add an event listener to the bank radio button
+bankRadio.addEventListener("click", function () {
+  // Hide the wallet address input
+  walletAddressInput.style.display = "none";
+  // Make the bank message text white
+  bankMessage.classList.add("text-white");
+  // Insert the bank message before the wallet address input
+  walletAddressInput.parentNode.insertBefore(bankMessage, walletAddressInput);
+});
+
+// Add event listeners to the USDT and Tron radio buttons
+usdtRadio.addEventListener("click", function () {
+  // Show the wallet address input
+  walletAddressInput.style.display = "block";
+  // Remove the bank message if it exists
+  if (bankMessage.parentNode === walletAddressInput.parentNode) {
+    walletAddressInput.parentNode.removeChild(bankMessage);
+  }
+});
+
+tronRadio.addEventListener("click", function () {
+  // Show the wallet address input
+  walletAddressInput.style.display = "block";
+  // Remove the bank message if it exists
+  if (bankMessage.parentNode === walletAddressInput.parentNode) {
+    walletAddressInput.parentNode.removeChild(bankMessage);
+  }
+});
