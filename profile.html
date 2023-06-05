@@ -178,145 +178,107 @@
     <!-- MAIN CONTENT -->
     <main class="relative mx-auto">
       <section class="m-6 md:m-8">
-        <div class="flex items-center space-x-2 w-max">
-          <h1 class="text-xl font-semibold">Shopping Cart</h1>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="w-6 h-6 text-gray-900"
-          >
-            <path
-              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-            />
-          </svg>
-        </div>
-
-        <!-- Cart -->
-        <section class="w-full md:w-3/5 lg:w-2/5 my-5">
-          <!-- Items -->
-          <div>
-            <!-- Item 1 -->
-            <div
-              class="grid grid-cols-6 items-center bg-gray-100 border-y border-gray-200"
-            >
-              <div class="col-span-2">
-                <img
-                  class="w-24 h-24 object-cover"
-                  src="images/books/1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
-                <div class="flex items-center justify-between space-x-4">
-                  <p class="text-base font-semibold">Crypto for Babies</p>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-gray-400 font-normal text-sm space-x-2">
-                  <span
-                    class="font-grotesque font-semibold text-lg text-gray-600"
-                    >$10,00</span
-                  >
-                  <span>x 1</span>
-                </p>
-              </div>
-            </div>
-            <!-- Item 2 -->
-            <div
-              class="grid grid-cols-6 items-center gap-2 bg-gray-100 border-y border-gray-200"
-            >
-              <div class="col-span-2">
-                <img
-                  class="w-24 h-24 object-cover"
-                  src="images/books/2.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
-                <div class="flex items-center justify-between space-x-4">
-                  <p class="text-base font-semibold">Goats In Business</p>
-                  <div>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <p class="text-gray-400 font-normal text-sm space-x-2">
-                  <span
-                    class="font-grotesque font-semibold text-lg text-gray-600"
-                    >$10,00</span
-                  >
-                  <span>x 1</span>
-                </p>
-              </div>
-            </div>
+        <!-- User Info -->
+        <section
+          class="w-full mx-auto flex flex-col items-center space-y-3 md:w-3/5 lg:w-2/5 my-5"
+        >
+          <img
+            class="w-16 h-16 rounded-full object-cover"
+            src="/images/authors/dale.jpg"
+            alt=""
+          />
+          <p class="font-semibold text-gray-800 text-xl">Dale Carnegie</p>
+          <p class="text-sm text-gray-500">
+            This is my bio and it is a very powerful introduction
+          </p>
+          <div class="flex items-center space-x-3">
+            <a href="https://twitter.com/afflishop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 24 24"
+                id="twitter"
+                class="w-7 h-7 bg-gray-200 rounded-full p-1 text-white"
+              >
+                <path
+                  d="M22,5.8a8.49,8.49,0,0,1-2.36.64,4.13,4.13,0,0,0,1.81-2.27,8.21,8.21,0,0,1-2.61,1,4.1,4.1,0,0,0-7,3.74A11.64,11.64,0,0,1,3.39,4.62a4.16,4.16,0,0,0-.55,2.07A4.09,4.09,0,0,0,4.66,10.1,4.05,4.05,0,0,1,2.8,9.59v.05a4.1,4.1,0,0,0,3.3,4A3.93,3.93,0,0,1,5,13.81a4.9,4.9,0,0,1-.77-.07,4.11,4.11,0,0,0,3.83,2.84A8.22,8.22,0,0,1,3,18.34a7.93,7.93,0,0,1-1-.06,11.57,11.57,0,0,0,6.29,1.85A11.59,11.59,0,0,0,20,8.45c0-.17,0-.35,0-.53A8.43,8.43,0,0,0,22,5.8Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/afflishop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 24 24"
+                id="instagram"
+                class="w-7 h-7 bg-gray-200 rounded-full p-1"
+              >
+                <path
+                  d="M12,9.52A2.48,2.48,0,1,0,14.48,12,2.48,2.48,0,0,0,12,9.52Zm9.93-2.45a6.53,6.53,0,0,0-.42-2.26,4,4,0,0,0-2.32-2.32,6.53,6.53,0,0,0-2.26-.42C15.64,2,15.26,2,12,2s-3.64,0-4.93.07a6.53,6.53,0,0,0-2.26.42A4,4,0,0,0,2.49,4.81a6.53,6.53,0,0,0-.42,2.26C2,8.36,2,8.74,2,12s0,3.64.07,4.93a6.86,6.86,0,0,0,.42,2.27,3.94,3.94,0,0,0,.91,1.4,3.89,3.89,0,0,0,1.41.91,6.53,6.53,0,0,0,2.26.42C8.36,22,8.74,22,12,22s3.64,0,4.93-.07a6.53,6.53,0,0,0,2.26-.42,3.89,3.89,0,0,0,1.41-.91,3.94,3.94,0,0,0,.91-1.4,6.6,6.6,0,0,0,.42-2.27C22,15.64,22,15.26,22,12S22,8.36,21.93,7.07Zm-2.54,8A5.73,5.73,0,0,1,19,16.87,3.86,3.86,0,0,1,16.87,19a5.73,5.73,0,0,1-1.81.35c-.79,0-1,0-3.06,0s-2.27,0-3.06,0A5.73,5.73,0,0,1,7.13,19a3.51,3.51,0,0,1-1.31-.86A3.51,3.51,0,0,1,5,16.87a5.49,5.49,0,0,1-.34-1.81c0-.79,0-1,0-3.06s0-2.27,0-3.06A5.49,5.49,0,0,1,5,7.13a3.51,3.51,0,0,1,.86-1.31A3.59,3.59,0,0,1,7.13,5a5.73,5.73,0,0,1,1.81-.35h0c.79,0,1,0,3.06,0s2.27,0,3.06,0A5.73,5.73,0,0,1,16.87,5a3.51,3.51,0,0,1,1.31.86A3.51,3.51,0,0,1,19,7.13a5.73,5.73,0,0,1,.35,1.81c0,.79,0,1,0,3.06S19.42,14.27,19.39,15.06Zm-1.6-7.44a2.38,2.38,0,0,0-1.41-1.41A4,4,0,0,0,15,6c-.78,0-1,0-3,0s-2.22,0-3,0a4,4,0,0,0-1.38.26A2.38,2.38,0,0,0,6.21,7.62,4.27,4.27,0,0,0,6,9c0,.78,0,1,0,3s0,2.22,0,3a4.27,4.27,0,0,0,.26,1.38,2.38,2.38,0,0,0,1.41,1.41A4.27,4.27,0,0,0,9,18.05H9c.78,0,1,0,3,0s2.22,0,3,0a4,4,0,0,0,1.38-.26,2.38,2.38,0,0,0,1.41-1.41A4,4,0,0,0,18.05,15c0-.78,0-1,0-3s0-2.22,0-3A3.78,3.78,0,0,0,17.79,7.62ZM12,15.82A3.81,3.81,0,0,1,8.19,12h0A3.82,3.82,0,1,1,12,15.82Zm4-6.89a.9.9,0,0,1,0-1.79h0a.9.9,0,0,1,0,1.79Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/Afflishop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 24 24"
+                id="facebook"
+                class="w-7 h-7 bg-gray-200 rounded-full p-1"
+              >
+                <path
+                  d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"
+                ></path>
+              </svg>
+            </a>
+            <a href="https://t.me/AfflishopOfficial">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                data-name="Layer 1"
+                viewBox="0 0 24 24"
+                id="telegram"
+                class="w-7 h-7 bg-gray-200 rounded-full p-1"
+              >
+                <path
+                  d="M11.99432,2a10,10,0,1,0,10,10A9.99917,9.99917,0,0,0,11.99432,2Zm3.17951,15.15247a.70547.70547,0,0,1-1.002.3515l-2.71467-2.10938L9.71484,17.002a.29969.29969,0,0,1-.285.03894l.334-2.98846.01069.00848.00683-.059s4.885-4.44751,5.084-4.637c.20147-.189.135-.23.135-.23.01147-.23053-.36152,0-.36152,0L8.16632,13.299l-2.69549-.918s-.414-.1485-.453-.475c-.041-.324.46649-.5.46649-.5l10.717-4.25751s.881-.39252.881.25751Z"
+                ></path>
+              </svg>
+            </a>
           </div>
-
-          <!-- Coupon Form -->
-          <form class="w-full py-4" action="/u/signup" method="POST">
-            <div class="grid grid-cols-12 gap-3 md:gap-2">
-              <div class="col-span-9">
-                <input
-                  type="text"
-                  name="coupon"
-                  placeholder="Enter coupon"
-                  required
-                  class="bg-transparent font-normal focus:border-blue-500 focus:ring-0 text-sm block w-full h-10 border border-gray-200 transition duration-300 px-4 rounded-md"
-                />
-              </div>
-              <div class="col-span-3">
-                <button
-                  id="submit-btn"
-                  type="submit"
-                  class="w-full text-sm flex items-center justify-center space-x-1 border border-gray-300 text-gray-800 transition-all font-semibold duration-300 h-10 px-8 rounded-md cursor-pointer"
-                >
-                  Apply
-                </button>
-              </div>
-            </div>
-          </form>
-
-          <!-- ORDER SUMMARY -->
-          <div class="space-y-2 py-4 border-t border-gray-100">
+          <p class="text-gray-800 py-2 border-b border-gray-200">
+            Author's Books
+          </p>
+          <div class="grid grid-cols-12 gap-2">
             <div
-              class="flex items-center justify-between text-sm text-gray-500"
+              class="col-span-6 bg-gray-50 py-2 px-2 border border-gray-200 rounded-md"
             >
-              <p>Subtotal</p>
-              <p>$125</p>
+              <img
+                class="shadow-md rounded-md"
+                src="/images/books/3.jpg"
+                alt=""
+              />
+              <div class="my-2">
+                <p class="text-base font-semibold text-gray-800">
+                  Different Winter
+                </p>
+                <p class="font-grotesque text-emerald-600 font-bold">$12,99</p>
+              </div>
             </div>
-            <div class="flex items-center justify-between text-black">
-              <p class="text-sm">Total</p>
-              <p class="font-grotesque font-bold text-lg">$105</p>
-            </div>
-            <button
-              id="checkout-btn"
-              type="submit"
-              class="w-full text-sm flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-semibold duration-300 h-10 px-8 rounded-md cursor-pointer"
+            <div
+              class="col-span-6 bg-gray-50 py-2 px-2 border border-gray-200 rounded-md"
             >
-              Proceed To Checkout
-            </button>
+              <img
+                class="shadow-md rounded-md"
+                src="/images/books/2.jpg"
+                alt=""
+              />
+              <div class="my-2">
+                <p class="text-base font-semibold text-gray-800">
+                  A Way Of Living
+                </p>
+                <p class="font-grotesque text-emerald-600 font-bold">$12,99</p>
+              </div>
+            </div>
           </div>
         </section>
       </section>
