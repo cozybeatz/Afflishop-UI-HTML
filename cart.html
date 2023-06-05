@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/output.css" />
+    <!-- PLUS JARKATA SANS AND DARKER GROTESQUE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Afflishop | E Books, Digital Products & Affiliates</title>
+  </head>
+  <body class="">
+    <!-- NAVIGATION -->
+    <section
+      id="nav"
+      class="flex justify-between items-center md:items-center md:mx-10 my-4 md:my-0"
+    >
+      <div class="basis-1/4">
+        <a class="" href="index.html">
+          <img class="w-full md:w-1/3" src="images/logo.png" alt="" />
+        </a>
+      </div>
+
+      <!-- SECOND PART OF NAV -->
+      <div class="flex justify-around items-center space-x-3 md:space-x-6 p-4">
+        <!-- SEARCH BUTTON -->
+        <div id="search-icon" class="cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 hover:text-blue-400"
+            onclick="toggleSearchBar()"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+
+        <!-- FAVORITE BUTTON -->
+        <!-- <div class="cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+          />
+        </svg>
+      </div> -->
+
+        <!-- CART BUTTON -->
+        <div>
+          <a
+            href="cart.html"
+            class="flex items-center justify-center drop-shadow-xl bg-blue-500 rounded-full w-12 h-12 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="">
+          <button
+            id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown"
+            class="text-slate-200 bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2.5 text-center inline-flex items-center"
+            type="button"
+          >
+            UPGRADE
+            <svg
+              class="w-4 h-4 ml-2"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div
+            id="dropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-sm shadow w-44 dark:bg-gray-700"
+          >
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownDefaultButton"
+            >
+              <li>
+                <a
+                  href="auth/vendor.html"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Vendor
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="auth/affiliate.html"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >Affiliate
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-4 h-4 ml-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative mx-auto">
+      <section class="m-6 md:m-8">
+        <div
+          class="flex items-center space-x-2 border-b border-gray-200 pb-4 w-max"
+        >
+          <h1 class="text-xl font-semibold">Shopping Cart</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6 text-gray-900"
+          >
+            <path
+              d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+            />
+          </svg>
+        </div>
+
+        <!-- Cart -->
+        <section class="w-full md:w-3/5 lg:w-2/5 my-10">
+          <!-- Item 1 -->
+          <div
+            class="grid grid-cols-6 items-center bg-gray-100 border-y border-gray-200"
+          >
+            <div class="col-span-2">
+              <img
+                class="w-24 h-24 object-cover"
+                src="/images/books/1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
+              <div class="flex items-center justify-between space-x-4">
+                <p class="text-base font-semibold">Crypto for Babies</p>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-400 font-normal text-sm space-x-2">
+                <span class="font-grotesque font-semibold text-lg text-gray-600"
+                  >$10,00</span
+                >
+                <span>x 1</span>
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="grid grid-cols-6 items-center gap-2 bg-gray-100 border-y border-gray-200"
+          >
+            <div class="col-span-2">
+              <img
+                class="w-24 h-24 object-cover"
+                src="/images/books/2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="col-start-4 col-end-7 py-2 px-3 space-y-0.5">
+              <div class="flex items-center justify-between space-x-4">
+                <p class="text-base font-semibold">Goats In Business</p>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-6 h-6 text-red-600 p-1 bg-white rounded-full cursor-pointer border border-gray-100 hover:border-red-300 transition-all"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="text-gray-400 font-normal text-sm space-x-2">
+                <span class="font-grotesque font-semibold text-lg text-gray-600"
+                  >$10,00</span
+                >
+                <span>x 1</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coupon Form -->
+        <form
+        class="w-full md:w-3/5 lg:w-2/5"
+            action="/u/signup"
+            method="POST"
+          >
+        
+          <div class="grid grid-cols-12 gap-3 md:gap-2">
+            <div class="col-span-6">
+              <input
+                type="text"
+                name="coupon"
+                placeholder="Enter coupon"
+                required
+                class="bg-transparent font-normal focus:border-blue-500 focus:ring-0 text-sm block w-full h-10 border border-gray-200 transition duration-300 px-2 rounded-md"
+              />
+            </div>
+            <div class="col-span-6">
+                <button
+                  id="submit-btn"
+                  type="submit"
+                  class="w-full text-sm flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 h-10 px-8 rounded-md cursor-pointer"
+                >
+                 Apply coupon
+                </button>
+              </div>
+        </form>
+
+        <!-- ORDER SUMMARY -->
+        <div>
+            
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-10 px-5 md:px-10 grid md:grid-cols-12 items-center gap-6 md:gap-9 bg-slate-900"
+    >
+      <div class="col-span-12 flex flex-row justify-start space-x-8">
+        <div class="flex flex-col items-start space-y-2">
+          <h1
+            class="text-xl md:text-2xl text-slate-200 font-semibold tracking-normal"
+          >
+            Contact Us
+          </h1>
+
+          <a
+            class="text-sm tracking-normal leading-6 md:text-xs font-normal text-gray-400 hover:text-yellow-500 transition duration-200"
+            href="mailto:support@market-snipers.com"
+          >
+            support@afflishop.com
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/search.js"></script>
+    <!-- <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>
