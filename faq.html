@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.5/dist/flowbite.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/output.css" />
+    <!-- PLUS JARKATA SANS AND DARKER GROTESQUE FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Afflishop | E Books, Digital Products & Affiliates</title>
+  </head>
+  <body class="">
+    <!-- NAVIGATION -->
+    <section
+      id="nav"
+      class="flex justify-between items-start md:items-center md:mx-10"
+    >
+      <div
+        class="flex basis-full md:basis-1/6 self-stretch items-center justify-between px-4 md:px-0"
+      >
+        <div
+          class="flex flex-col basis-1/3 md:basis-full w-full md:p-0 text-base font-light"
+        >
+          <a class="" href="index.html">
+            <img class="w-4/5 md:w-2/3" src="images/logo.png" alt="" />
+          </a>
+        </div>
+
+        <svg
+          id="open-button"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          onclick="toggleNav()"
+          class="w-12 h-12 text-black cursor-pointer p-2 md:p-1 rounded-xl md:hidden"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+
+        <svg
+          id="close-button"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1"
+          stroke="currentColor"
+          class="w-12 h-12 text-black hidden cursor-pointer p-2 md:p-1 rounded-xl md:hidden"
+          onclick="toggleNav()"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+
+      <div
+        id="nav-list"
+        class="p-4 hidden md:block self-stretch md:bg-transparent border-t border-dotted border-gray-500 md:border-none md:self-center"
+      >
+        <ul
+          id="nav-ul"
+          class="font-semibold list-none flex space-y-2 md:space-y-0 md:space-x-5 text-sm md:text-xs"
+        >
+          <li
+            class="text-slate-700 font-medium transition-all duration-150 p-2 hover:text-slate-400"
+          >
+            <a href="auth/affiliate.html">Affiliate</a>
+          </li>
+          <li
+            class="text-slate-700 font-medium transition-all duration-150 p-2 hover:text-slate-400"
+          >
+            <a href="auth/vendor.html">Vendor</a>
+          </li>
+          <li
+            class="text-slate-700 font-medium transition-all duration-150 p-2 hover:text-slate-400"
+          >
+            <a href="faq.html">FAQ</a>
+          </li>
+          <li
+            class="text-slate-700 font-medium transition-all duration-150 p-2 hover:text-slate-400"
+          >
+            <a href="terms.html">Terms</a>
+          </li>
+          <li
+            class="text-slate-700 font-medium transition-all duration-150 p-2 hover:text-slate-400"
+          >
+            <a href="auth/signin.html">Login</a>
+          </li>
+          <li
+            class="bg-blue-500 text-gray-50 shadow-md transition-all font-normal duration-300 px-4 py-3 hover:-translate-y-0.5 w-max rounded-full cursor-pointer"
+          >
+            <a href="explore.html">Explore</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="mx-auto">
+      <section class="my-10 mx-5 md:mx-auto md:w-11/12">
+        <div
+          class="text-gray-400 flex flex-col md:flex-col justify-center items-center mb-2"
+        >
+          <span class="text-center font-medium text-3xl md:text-4xl w-full"
+            >Frequently Asked Questions</span
+          >
+
+          <form id="search-faq-form" class="w-full">
+            <div class="flex items-center justify-center">
+              <input
+                id="faqSearchBar"
+                oninput="handleSearch()"
+                type="search"
+                class="block mt-8 px-2.5 py-3 w-5/6 md:w-4/6 z-20 text-sm text-gray-300 bg-gray-700 shadow-lg rounded-lg focus:ring-slate-200 focus:border-slate-200 placeholder:text-gray-400"
+                placeholder="Search FAQ..."
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <section class="bg-white">
+          <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="grid pt-8 text-left md:gap-16 md:grid-cols-2">
+              <div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    What is Afflishop?
+                  </h3>
+                  <p class="text-gray-500">
+                    Afflishop is a digital products marketplace, providing
+                    steady income for vendors and affiliates.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    What is a digital product ?
+                  </h3>
+                  <p class="text-gray-500">
+                    A digital product is simply a non-physical asset or service
+                    that can be sold, purchased and consumed online. Digital
+                    products includes but not limited to Courses, Ebooks,
+                    Memberships, Coaching and Tools.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    Who is a vendor?
+                  </h3>
+                  <p class="text-gray-500">
+                    A vendor is the creator/owner of the digital products.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    Who is an affiliate?
+                  </h3>
+                  <p class="text-gray-500">
+                    An Affiliate is a person who engages in the business of
+                    affiliate marketing.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    What is affiliate marketing?
+                  </h3>
+                  <p class="text-gray-500">
+                    Affiliate marketing is a type of performance-based marketing
+                    where individuals or companies promote products or services
+                    of other businesses and earn a commission for each sale or
+                    lead they generate. Affiliates (also known as publishers)
+                    typically use various marketing techniques such as websites,
+                    blogs, social media, or email marketing to drive traffic to
+                    the merchant's website and encourage conversions.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    How does affiliate marketing work?
+                  </h3>
+                  <p class="text-gray-500">
+                    Affiliate marketing involves three primary parties: the
+                    merchant (seller), the affiliate (promoter), and the
+                    customer. The affiliate promotes the merchant's products or
+                    services through their marketing channels, using special
+                    tracking links or codes provided by the merchant. When a
+                    customer clicks on the affiliate's link, visits the
+                    merchant's website, and makes a purchase, the affiliate
+                    receives a commission based on the agreed-upon terms.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    How do affiliates earn money?
+                  </h3>
+                  <p class="text-gray-500">
+                    Affiliates earn money through commissions. When a customer
+                    makes a purchase or performs a desired action (such as
+                    signing up for a service or filling out a form) through the
+                    affiliate's referral link, the affiliate receives a
+                    percentage of the sale or a fixed commission, depending on
+                    the affiliate program's terms. Commissions can vary widely,
+                    ranging from a few percent to a significant portion of the
+                    product's price.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    What are the benefits of affiliate marketing?
+                  </h3>
+                  <p class="text-gray-500">
+                    Affiliate marketing offers several benefits for all parties
+                    involved. For merchants, it provides an effective way to
+                    reach a wider audience and increase sales without
+                    significant upfront investment. Affiliates can earn passive
+                    income by promoting products they believe in, without the
+                    need to create their own products. Customers benefit from
+                    the personalized recommendations and additional information
+                    provided by affiliates, making their purchase decisions
+                    easier.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    Are there any costs associated with affiliate marketing?
+                  </h3>
+                  <p class="text-gray-500">
+                    While affiliate marketing can be relatively low-cost
+                    compared to other business models, there are some expenses
+                    to consider. These may include website hosting, domain
+                    registration, marketing tools, advertising costs, content
+                    creation, and other promotional expenses. However, the
+                    specific costs can vary greatly depending on your chosen
+                    approach and the scale of your affiliate marketing
+                    activities.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    How do affiliates track their referrals and commissions?
+                  </h3>
+                  <p class="text-gray-500">
+                    Affiliates typically use unique affiliate links or codes
+                    provided by the merchant to track their referrals and
+                    commissions accurately. When a customer clicks on an
+                    affiliate link, a tracking cookie is placed on their device,
+                    allowing the merchant to identify the affiliate responsible
+                    for the referral. Some affiliate networks and platforms also
+                    provide comprehensive dashboards and reporting tools for
+                    affiliates to monitor their performance, track conversions,
+                    and view their earnings.
+                  </p>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    Can I do affiliate marketing without a website?
+                  </h3>
+                  <p class="text-gray-500">
+                    While having a website or online platform can greatly
+                    facilitate your affiliate marketing efforts, it is not
+                    always mandatory. Some affiliates leverage social media
+                    platforms, YouTube channels, email marketing, or other
+                    channels to promote affiliate products without a website.
+                    However, having a dedicated website or blog provides a more
+                    stable and customizable platform to showcase your content,
+                    build an audience, and establish your brand.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    How to register / join Afflishop?
+                  </h3>
+                  <ul class="text-gray-500 space-y-4">
+                    <li>
+                      1. Navigate to and click on sign up from the welcome page
+                    </li>
+                    <li>
+                      2. When the signup page loads, Fill the form with your
+                      details.
+                    </li>
+                    <li>
+                      3. Check your email for an email confirmation mail and
+                      click the link therein
+                    </li>
+                    <li>
+                      4i. Proceed to make payment for your desired package
+                      (Vendor package= $20, Affiliate package = $10)
+                    </li>
+                    <li>
+                      4ii. Alternatively you can purchase the Comprehensive
+                      Affiliate Mentorship-Afflishop (CAMA) for $14 and get a
+                      FREE pass for both the vendor and affiliate package
+                      (limited-time offer).
+                    </li>
+                  </ul>
+                </div>
+                <div class="mb-10 faq">
+                  <h3
+                    class="flex items-center mb-4 text-lg font-medium text-gray-900"
+                  >
+                    <svg
+                      class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    How can I become an affiliate marketer?
+                  </h3>
+                  <p class="text-gray-500">
+                    To become an affiliate marketer, you can follow these steps:
+                  </p>
+                  <ul class="text-gray-500 space-y-4">
+                    <li>
+                      Choose a niche or industry you are passionate about.
+                    </li>
+                    <li>
+                      Research and identify affiliate programs within your
+                      chosen niche.
+                    </li>
+                    <li>
+                      Join affiliate networks or directly sign up with
+                      individual merchants.
+                    </li>
+                    <li>
+                      Create a platform or online presence to promote products
+                      (e.g., website, blog, social media).
+                    </li>
+                    <li>
+                      Produce high-quality content and incorporate affiliate
+                      links strategically.
+                    </li>
+                    <li>
+                      Drive traffic to your platform through various marketing
+                      techniques.
+                    </li>
+                    <li>
+                      Monitor your performance, analyze data, and optimize your
+                      strategies for better results.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="py-10 px-5 md:px-10 grid md:grid-cols-12 items-center gap-6 md:gap-9 bg-gray-100"
+    >
+      <div
+        class="col-span-12 flex flex-col items-start md:flex-row justify-start space-y-2 md:space-x-8"
+      >
+        <div class="flex flex-col items-start space-y-2">
+          <h1
+            class="text-xl md:text-2xl text-slate-900 font-semibold tracking-normal"
+          >
+            Contact Us
+          </h1>
+
+          <a
+            class="text-sm tracking-normal leading-6 md:text-xs font-normal text-gray-600 hover:text-yellow-500 transition duration-200"
+            href="mailto:support@market-snipers.com"
+          >
+            support@afflishop.com
+          </a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <a href="https://twitter.com/afflishop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              id="twitter"
+              class="w-7 h-7 bg-gray-200 rounded-full p-1 text-white"
+            >
+              <path
+                d="M22,5.8a8.49,8.49,0,0,1-2.36.64,4.13,4.13,0,0,0,1.81-2.27,8.21,8.21,0,0,1-2.61,1,4.1,4.1,0,0,0-7,3.74A11.64,11.64,0,0,1,3.39,4.62a4.16,4.16,0,0,0-.55,2.07A4.09,4.09,0,0,0,4.66,10.1,4.05,4.05,0,0,1,2.8,9.59v.05a4.1,4.1,0,0,0,3.3,4A3.93,3.93,0,0,1,5,13.81a4.9,4.9,0,0,1-.77-.07,4.11,4.11,0,0,0,3.83,2.84A8.22,8.22,0,0,1,3,18.34a7.93,7.93,0,0,1-1-.06,11.57,11.57,0,0,0,6.29,1.85A11.59,11.59,0,0,0,20,8.45c0-.17,0-.35,0-.53A8.43,8.43,0,0,0,22,5.8Z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/afflishop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              id="instagram"
+              class="w-7 h-7 bg-gray-200 rounded-full p-1"
+            >
+              <path
+                d="M12,9.52A2.48,2.48,0,1,0,14.48,12,2.48,2.48,0,0,0,12,9.52Zm9.93-2.45a6.53,6.53,0,0,0-.42-2.26,4,4,0,0,0-2.32-2.32,6.53,6.53,0,0,0-2.26-.42C15.64,2,15.26,2,12,2s-3.64,0-4.93.07a6.53,6.53,0,0,0-2.26.42A4,4,0,0,0,2.49,4.81a6.53,6.53,0,0,0-.42,2.26C2,8.36,2,8.74,2,12s0,3.64.07,4.93a6.86,6.86,0,0,0,.42,2.27,3.94,3.94,0,0,0,.91,1.4,3.89,3.89,0,0,0,1.41.91,6.53,6.53,0,0,0,2.26.42C8.36,22,8.74,22,12,22s3.64,0,4.93-.07a6.53,6.53,0,0,0,2.26-.42,3.89,3.89,0,0,0,1.41-.91,3.94,3.94,0,0,0,.91-1.4,6.6,6.6,0,0,0,.42-2.27C22,15.64,22,15.26,22,12S22,8.36,21.93,7.07Zm-2.54,8A5.73,5.73,0,0,1,19,16.87,3.86,3.86,0,0,1,16.87,19a5.73,5.73,0,0,1-1.81.35c-.79,0-1,0-3.06,0s-2.27,0-3.06,0A5.73,5.73,0,0,1,7.13,19a3.51,3.51,0,0,1-1.31-.86A3.51,3.51,0,0,1,5,16.87a5.49,5.49,0,0,1-.34-1.81c0-.79,0-1,0-3.06s0-2.27,0-3.06A5.49,5.49,0,0,1,5,7.13a3.51,3.51,0,0,1,.86-1.31A3.59,3.59,0,0,1,7.13,5a5.73,5.73,0,0,1,1.81-.35h0c.79,0,1,0,3.06,0s2.27,0,3.06,0A5.73,5.73,0,0,1,16.87,5a3.51,3.51,0,0,1,1.31.86A3.51,3.51,0,0,1,19,7.13a5.73,5.73,0,0,1,.35,1.81c0,.79,0,1,0,3.06S19.42,14.27,19.39,15.06Zm-1.6-7.44a2.38,2.38,0,0,0-1.41-1.41A4,4,0,0,0,15,6c-.78,0-1,0-3,0s-2.22,0-3,0a4,4,0,0,0-1.38.26A2.38,2.38,0,0,0,6.21,7.62,4.27,4.27,0,0,0,6,9c0,.78,0,1,0,3s0,2.22,0,3a4.27,4.27,0,0,0,.26,1.38,2.38,2.38,0,0,0,1.41,1.41A4.27,4.27,0,0,0,9,18.05H9c.78,0,1,0,3,0s2.22,0,3,0a4,4,0,0,0,1.38-.26,2.38,2.38,0,0,0,1.41-1.41A4,4,0,0,0,18.05,15c0-.78,0-1,0-3s0-2.22,0-3A3.78,3.78,0,0,0,17.79,7.62ZM12,15.82A3.81,3.81,0,0,1,8.19,12h0A3.82,3.82,0,1,1,12,15.82Zm4-6.89a.9.9,0,0,1,0-1.79h0a.9.9,0,0,1,0,1.79Z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/Afflishop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              id="facebook"
+              class="w-7 h-7 bg-gray-200 rounded-full p-1"
+            >
+              <path
+                d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://t.me/AfflishopOfficial">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              id="telegram"
+              class="w-7 h-7 bg-gray-200 rounded-full p-1"
+            >
+              <path
+                d="M11.99432,2a10,10,0,1,0,10,10A9.99917,9.99917,0,0,0,11.99432,2Zm3.17951,15.15247a.70547.70547,0,0,1-1.002.3515l-2.71467-2.10938L9.71484,17.002a.29969.29969,0,0,1-.285.03894l.334-2.98846.01069.00848.00683-.059s4.885-4.44751,5.084-4.637c.20147-.189.135-.23.135-.23.01147-.23053-.36152,0-.36152,0L8.16632,13.299l-2.69549-.918s-.414-.1485-.453-.475c-.041-.324.46649-.5.46649-.5l10.717-4.25751s.881-.39252.881.25751Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/faq.js"></script>
+    <!-- <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+  </body>
+</html>
