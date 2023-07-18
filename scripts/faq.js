@@ -8,18 +8,18 @@ function handleSearch() {
   const searchBar = document.getElementById("faqSearchBar");
 
   // Get the value of the input
-  const searchQuery = searchBar.value;
+  const searchQuery = searchBar.value.toLowerCase();
 
   // Perform any desired actions with the searchQuery
   console.log("Search query:", searchQuery);
 
   for (let h3 in h3Elements) {
-    const h3TextContent = h3Elements[h3].textContent;
+    const h3TextContent = h3Elements[h3].textContent.toLowerCase();
 
-    if (h3TextContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-      console.log(h3TextContent);
+    if (h3TextContent.includes(searchQuery)) {
+      h3Elements[h3].parentElement.classList.remove("hidden");
     } else {
-      h3Elements[h3].parentElement.classList.toggle("hidden");
+      h3Elements[h3].parentElement.classList.add("hidden");
     }
   }
   // Example: You can perform an AJAX request or modify the DOM based on the search query
