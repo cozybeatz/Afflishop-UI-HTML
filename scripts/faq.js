@@ -22,5 +22,4 @@ function handleSearch() {
       h3Elements[h3].parentElement.classList.add("hidden");
     }
   }
-  // Example: You can perform an AJAX request or modify the DOM based on the search query
 }
