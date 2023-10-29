@@ -271,123 +271,145 @@
         <section
           class="flex-col basis-full md:basis-2/6 border border-dotted bg-slate-900 self-stretch md:self-start items-center m-4 px-6 py-10 rounded-xl"
         >
-          <form class="w-full" action="">
-            <div class="grid grid-cols-12 gap-6 w-full">
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Select Category</label>
-               <select name="" id="" class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4">
-                <option value="">Category 1</option>
-                <option value="">Category 2</option>
-                <option value="">Category 3</option>
-                <option value="">Category 4</option>
-                <option value="">Category 5</option>
-               </select>
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Product Name</label>
-                <input
-                  type="text"
-                  name="productName"
-                  id="productName"
-                  required
-                  autocomplete="productName"
-                  placeholder="Enter product name"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                />
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Old Price</label>
-                <input
-                  type="number"
-                  name="oldPrice"
-                  id="oldPrice"
-                  required
-                  autocomplete="oldPrice"
-                  placeholder="Enter old price"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                />
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Current Price</label>
-                <input
-                type="number"
-                name="currentPrice"
-                id="currentPrice"
-                required
-                autocomplete="currentPrice"
-                placeholder="Enter current price"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                />
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Commission per Sale for Affiliates
-              </label>
-                <input
-                  type="number"
-                  name="commission"
-                  id="commission"
-                  required
-                  autocomplete="commission"
-                  placeholder="Enter affilates commission"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                />
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Landing page link (optional)
-              </label>
-                <input
-                  type="text"
-                  name="landingPage"
-                  id="landingPage"
-                  autocomplete="landingPage"
-                  placeholder="Landing page link"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                />
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Promotional material link (optional)</label>
-                <input
-                  type="text"
-                  name="promoLink"
-                  id="promoLink"
-                  autocomplete="promoLink"
-                  placeholder="Promotional material link"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                />
-              </div>
-              <div class="col-span-12 md:col-span-12">
-                <label for="bank" class="ml-2 text-base text-gray-300"
-                >Description</label>
-                <textarea 
-                  cols="20" 
-                  rows="10"
-                  type="text"
-                  name="description"
-                  id="description"
-                  required
-                  autocomplete="description"
-                  placeholder="Enter product description"
-                  class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
-                  ></textarea>
-              </div>
-              <div class="col-span-12 my-4">
-                <button
-                  id="submit-btn"
-                  type="submit"
-                  class="w-full text-base flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 px-8 py-3 rounded-full cursor-pointer"
-                >
-                  Proceed
-                </button>
-              </div>
+        <form class="w-full" action="">
+          <div class="grid grid-cols-12 gap-6 w-full">
+            <div class="col-span-12 md:col-span-12">
+              <label for="category" class="ml-2 text-base text-gray-300"
+              >Select Category</label>
+             <select name="category" id="category" class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4">
+              <option value="">Category 1</option>
+              <option value="">Category 2</option>
+              <option value="">Category 3</option>
+              <option value="">Category 4</option>
+              <option value="">Category 5</option>
+             </select>
             </div>
-          </form>
+            <div class="col-span-12 md:col-span-12">
+              <label for="productName" class="ml-2 text-base text-gray-300"
+              >Product Name</label>
+              <input
+                type="text"
+                name="productName"
+                id="productName"
+                required
+                autocomplete="productName"
+                placeholder="Enter product name"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+              />
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="oldPrice" class="ml-2 text-base text-gray-300"
+              >Old Price</label>
+              <input
+                type="number"
+                name="oldPrice"
+                id="oldPrice"
+                required
+                autocomplete="oldPrice"
+                placeholder="Enter old price"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+              />
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="currentPrice" class="ml-2 text-base text-gray-300"
+              >Current Price</label>
+              <input
+              type="number"
+              name="currentPrice"
+              id="currentPrice"
+              required
+              autocomplete="currentPrice"
+              placeholder="Enter current price"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+              />
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="commission" class="ml-2 text-base text-gray-300"
+              >Commission per Sale for Affiliates
+            </label>
+              <input
+                type="number"
+                name="commission"
+                id="commission"
+                required
+                autocomplete="commission"
+                placeholder="Enter affilates commission"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+              />
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="landingPage" class="ml-2 text-base text-gray-300"
+              >Landing page link (optional)
+            </label>
+              <input
+                type="text"
+                name="landingPage"
+                id="landingPage"
+                autocomplete="landingPage"
+                placeholder="Landing page link"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+              />
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="promoLink" class="ml-2 text-base text-gray-300"
+              >Promotional material link (optional)</label>
+              <input
+                type="text"
+                name="promoLink"
+                id="promoLink"
+                autocomplete="promoLink"
+                placeholder="Promotional material link"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+              />
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="description" class="ml-2 text-base text-gray-300"
+              >Description</label>
+              <textarea 
+                cols="20" 
+                rows="10"
+                type="text"
+                name="description"
+                id="description"
+                required
+                autocomplete="description"
+                placeholder="Enter product description"
+                class="text-white block w-full shadow-sm text-base border border-white rounded-md placeholder:text-gray-600 bg-slate-900 py-2.5 px-4"
+                ></textarea>
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="featuredPhoto" class="ml-2 text-base text-gray-300">
+                Featured Photo
+              </label>
+              <input
+                type="file"
+                id="featuredPhoto"
+                name="featuredPhoto"
+                class="w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              >
+            </div>
+            <div class="col-span-12 md:col-span-12">
+              <label for="otherPhotos" class="ml-2 text-base text-gray-300">
+                Other Photos
+              </label>
+              <input
+                type="file"
+                id="featuredPhoto"
+                name="featuredPhoto"
+                class="w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+              >
+            </div>
+            <div class="col-span-12 my-4">
+              <button
+                id="submit-btn"
+                type="submit"
+                class="w-full text-base flex items-center justify-center space-x-1 bg-blue-500 text-gray-50 shadow-lg transition-all font-normal duration-300 px-8 py-3 rounded-full cursor-pointer"
+              >
+                Proceed
+              </button>
+            </div>
+          </div>
+        </form>
         </section>
       </div>
     </div>
