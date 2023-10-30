@@ -293,31 +293,25 @@
             </div>
           </div>
         </section>
-        <section
+         <section
           class="flex-col basis-full md:basis-2/6 bg-slate-900 self-stretch md:self-start items-center m-4 px-6"
         >
           <form class="w-full" action="">
             <div class="grid grid-cols-12 gap-6 w-full">
               <div class="col-span-12 md:col-span-12">
-                <label for="category" class="ml-2 text-base text-gray-300"
-                  >Select Category</label
-                >
-                <select
-                  name="category"
-                  id="category"
-                  class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 block w-full shadow-sm text-base border rounded-md placeholder:text-gray-400 py-2.5 px-4"
-                >
-                  <option value="">Category 1</option>
-                  <option value="">Category 2</option>
-                  <option value="">Category 3</option>
-                  <option value="">Category 4</option>
-                  <option value="">Category 5</option>
-                </select>
+                <label for="category" class="text-base text-gray-300"
+                >Select Category</label>
+               <select name="category" id="category" class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 text-base mt-1 block w-full h-12 md:h-10 rounded-md transition duration-300 placeholder:text-gray-400 py-2.5 px-4">
+                <option value="">Category 1</option>
+                <option value="">Category 2</option>
+                <option value="">Category 3</option>
+                <option value="">Category 4</option>
+                <option value="">Category 5</option>
+               </select>
               </div>
               <div class="col-span-12 md:col-span-12">
-                <label for="productName" class="ml-2 text-base text-gray-300"
-                  >Product Name</label
-                >
+                <label for="productName" class="text-base text-gray-300"
+                >Product Name</label>
                 <input
                   type="text"
                   name="productName"
@@ -330,8 +324,7 @@
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="oldPrice" class="text-base text-gray-300"
-                  >Old Price</label
-                >
+                >Old Price</label>
                 <input
                   type="number"
                   name="oldPrice"
@@ -344,22 +337,21 @@
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="currentPrice" class="text-base text-gray-300"
-                  >Current Price</label
-                >
+                >Current Price</label>
                 <input
-                  type="number"
-                  name="currentPrice"
-                  id="currentPrice"
-                  required
-                  autocomplete="currentPrice"
-                  placeholder="Enter current price"
+                type="number"
+                name="currentPrice"
+                id="currentPrice"
+                required
+                autocomplete="currentPrice"
+                placeholder="Enter current price"
                   class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 text-base mt-1 block w-full h-12 md:h-10 rounded-md transition duration-300 placeholder:text-gray-400 py-2.5 px-4"
                 />
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="commission" class="text-base text-gray-300"
-                  >Commission per Sale for Affiliates
-                </label>
+                >Commission per Sale for Affiliates
+              </label>
                 <input
                   type="number"
                   name="commission"
@@ -372,8 +364,8 @@
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="landingPage" class="text-base text-gray-300"
-                  >Landing page link (optional)
-                </label>
+                >Landing page link (optional)
+              </label>
                 <input
                   type="text"
                   name="landingPage"
@@ -385,8 +377,7 @@
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="promoLink" class="text-base text-gray-300"
-                  >Promotional material link (optional)</label
-                >
+                >Promotional material link (optional)</label>
                 <input
                   type="text"
                   name="promoLink"
@@ -398,10 +389,9 @@
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="description" class="text-base text-gray-300"
-                  >Description</label
-                >
-                <textarea
-                  cols="20"
+                >Description</label>
+                <textarea 
+                  cols="20" 
                   rows="10"
                   type="text"
                   name="description"
@@ -409,8 +399,8 @@
                   required
                   autocomplete="description"
                   placeholder="Enter product description"
-                  class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 block w-full shadow-sm text-base rounded-md placeholder:text-gray-400 py-2.5 px-4"
-                ></textarea>
+                  class="text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200 block w-full shadow-sm text-base rounded-md placeholder:text-gray-400  py-2.5 px-4"
+                  ></textarea>
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="featuredPhoto" class="text-base text-gray-300">
@@ -421,7 +411,7 @@
                   id="featuredPhoto"
                   name="featuredPhoto"
                   class="w-full py-2 px-3 rounded-md text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200"
-                />
+                >
               </div>
               <div class="col-span-12 md:col-span-12">
                 <label for="otherPhotos" class="text-base text-gray-300">
@@ -432,7 +422,7 @@
                   id="featuredPhoto"
                   name="featuredPhoto"
                   class="w-full py-2 px-3 rounded-md text-white bg-slate-600 font-normal focus:border-blue-300 focus:ring-1 focus:ring-blue-200"
-                />
+                >
               </div>
               <div class="col-span-12 my-4">
                 <button
